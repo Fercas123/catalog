@@ -1,0 +1,25 @@
+body{
+
+font-family: 'Playfair Display', serif; background-image: url('img/wood.jpg'); background-color: #FFE4C0
+}
+
+h1{
+    font-family: 'Lobster', cursive; text-align: center;
+}
+
+.item{
+    color: #5190B2;
+}
+.price {
+    text-align: right; width:50%; float: right;
+}
+
+.flash          { background: #B8E6FF; }
+
+
+a {text-decoration: none; color:#B8E6FF; font-size: .75em;}
+
+.card {position:absolute; left: 20%; right: 20%; border: 2px solid;
+    box-shadow: 8px 8px 6px black; padding: 35px; margin: 5px; border-color: #ffffff; background-color: #ffffff }
+
+.links { color:#5190B2;}

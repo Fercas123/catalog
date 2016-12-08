@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel=stylesheet type=text/css href="{{url_for('static', filename='style.css')}}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display" rel="stylesheet">
+    </head>
+    <body>
+        <div class="card">
+            <div>
+                {%if 'username' not in session %}
+                <a href="{{url_for('showLogin')}}"> Log In</a>
+                {%else %}
+                <a href="{{url_for('disconnect')}}">Log Out</a>
+                {%endif %}
+            </div>
+            <hr>
+            <h1>Edit {{item.name}}</h1>
+            <hr>
+            <form action='{{url_for('EditProject',category_id= category_id, project_id= item.id)}}' method='POST'>
+                </br>
+                <p>New Project Name:</p>
+                <input type='text' size="30" name="name" placeholder='{{item.name}}'>
+                <input type = 'submit' value = 'Rename'>
+                <a href='{{url_for('ShowProjects', category_id= item.category_id)}}'>Cancel</a>
+            </form>
+        </div>
+    </body>
+</html>
